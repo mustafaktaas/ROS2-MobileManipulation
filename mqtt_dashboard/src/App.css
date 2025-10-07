@@ -1,0 +1,81 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.map-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.canvas-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 1 / 1; /* Kare oran */
+  overflow: hidden;
+}
+
+.map-canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.camera-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.camera-container img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+.joystick-container {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .map-container,
+  .camera-container {
+    max-width: 100%;
+  }
+
+  .canvas-wrapper {
+    aspect-ratio: 1 / 1;
+  }
+}
